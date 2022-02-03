@@ -1,0 +1,125 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+header {
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  padding: 0 2.01%;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header h1 {
+  left: 2.01%;
+  top: 30px;
+  position: fixed;
+  z-index: 100;
+}
+
+header #humberger-menu {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 10px;
+  height: 12px;
+  left: 91.74%;
+  line-height: 12px;
+  padding-left: 29px;
+  position: fixed;
+  text-decoration: none;
+  top: 36px;
+  z-index: 50;
+}
+
+header #humberger-menu.open .top {
+  left: 11px;
+  -webkit-transform: translate(-50%, -50%) rotate(30deg);
+          transform: translate(-50%, -50%) rotate(30deg);
+  top: 50%;
+}
+
+header #humberger-menu.open .center {
+  opacity: 0;
+}
+
+header #humberger-menu.open .bottom {
+  bottom: 50%;
+  left: 11px;
+  -webkit-transform: translate(-50%, 50%) rotate(-30deg);
+          transform: translate(-50%, 50%) rotate(-30deg);
+}
+
+header span {
+  background-color: #fff;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  width: 22px;
+}
+
+header .top {
+  top: 0;
+}
+
+header .center {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .bottom {
+  bottom: 0;
+}
+
+.fv {
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(54%, white), color-stop(54%, #212221));
+  background: linear-gradient(90deg, white 54%, #212221 54%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
+  height: 740px;
+  position: relative;
+}
+
+.fv img {
+  left: 0;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  width: 76.39%;
+}
+
+.fv .fv-text-box {
+  color: #fff;
+  left: 66.25%;
+  position: absolute;
+  top: 161px;
+}
+
+.fv .small-text {
+  font-family: '游ゴシック体';
+  font-size: 20px;
+  font-weight: Bold;
+}
+
+.fv .large-text {
+  font-family: Montserrat;
+  font-size: 72px;
+}
+/*# sourceMappingURL=style.css.map */

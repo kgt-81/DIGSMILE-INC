@@ -1,0 +1,108 @@
+@charset 'UTF-8';
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img{
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  width: 100%;
+}
+// header
+header{
+  border-radius: 2px;
+  display: flex;
+  left: 0;
+  padding: 0 2.01%;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  h1{
+    left: 2.01%;
+    top: 30px;
+    position: fixed;
+    z-index: 100;
+  }
+  #humberger-menu{
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 10px;
+    height: 12px;
+    left: 91.74%;
+    line-height: 12px;
+    padding-left: 29px;
+    position: fixed;
+    text-decoration: none;
+    top: 36px;
+    z-index: 50;
+    &.open{
+      .top{
+        left: 11px;
+        transform: translate(-50%,-50%) rotate(30deg);
+        top: 50%;
+      }
+      .center{
+        opacity: 0;
+      }
+      .bottom{
+        bottom: 50%;
+        left: 11px;
+        transform: translate(-50%,50%) rotate(-30deg);
+      }
+    }
+  }
+  span{
+    background-color: #fff;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition-duration: 0.4s;
+    width: 22px;
+  }
+  .top{
+    top: 0;
+  }
+  .center{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .bottom{
+    bottom: 0;
+  }
+
+}
+
+// fv
+.fv{
+  background: rgb(255,255,255);
+background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 54%, rgba(33,34,33,1) 54%);
+background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 54%, rgba(33,34,33,1) 54%);
+background: linear-gradient(90deg, rgba(255,255,255,1) 54%, rgba(33,34,33,1) 54%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
+  height: 740px;
+  position: relative;
+  img{
+    left: 0;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    width: 76.39%;
+  }
+  .fv-text-box{
+    color: #fff;
+    left: 66.25%;
+    position: absolute;
+    top: 161px;
+  }
+  .small-text{
+    font-family: '游ゴシック体';
+    font-size: 20px;
+    font-weight: Bold;
+  }
+  .large-text{
+    font-family: Montserrat;
+    font-size: 72px;
+  }
+}
