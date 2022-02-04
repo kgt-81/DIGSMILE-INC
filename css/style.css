@@ -34,7 +34,7 @@ h2 {
   background-color: #000;
   color: #fff;
   display: block;
-  font-family: montserrat,sans-serif;
+  font-family: 'Montserrat Medium',sans-serif;
   font-size: 12px;
   font-weight: 700;
   height: 36px;
@@ -149,6 +149,10 @@ header .bottom {
   font-weight: 700;
 }
 
+.fv .small-text-en {
+  font-family: 'Montserrat Medium',sans-serif;
+}
+
 .fv .large-text {
   font-family: montserrat,sans-serif;
   font-weight: 800;
@@ -217,6 +221,56 @@ header .bottom {
 
 .two-col p {
   margin-bottom: 28px;
+}
+
+#latest_topics {
+  padding: 60px 0;
+}
+
+#latest_topics h2 {
+  width: 100%;
+}
+
+#latest_topics .wrapper {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#latest_topics .topics_box {
+  width: 63.64%;
+}
+
+#latest_topics .topics_box .topics_item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 29px;
+}
+
+#latest_topics .topics_box .topics_item:last-of-type {
+  margin-bottom: 30px;
+}
+
+#latest_topics .topics_box time {
+  color: #cecece;
+  display: inline-block;
+  font-family: 'Montserrat Medium',sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+#latest_topics .topics_box p {
+  font-family: '游ゴシック';
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 10px;
 }
 
 footer {
