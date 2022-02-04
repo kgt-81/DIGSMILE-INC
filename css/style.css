@@ -13,6 +13,36 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: montserrat,sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 76.39%;
+}
+
+.readme {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  font-family: montserrat,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  width: 160px;
+}
+
 header {
   border-radius: 2px;
   display: -webkit-box;
@@ -34,14 +64,15 @@ header h1 {
 
 header #humberger-menu {
   color: #fff;
-  font-family: Montserrat;
+  font-family: montserrat,sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 10px;
   height: 12px;
   left: 91.74%;
   line-height: 12px;
   padding-left: 29px;
   position: fixed;
-  text-decoration: none;
   top: 36px;
   z-index: 50;
 }
@@ -113,13 +144,91 @@ header .bottom {
 }
 
 .fv .small-text {
-  font-family: '游ゴシック体';
+  font-family: '游ゴシック';
   font-size: 20px;
-  font-weight: Bold;
+  font-weight: 700;
 }
 
 .fv .large-text {
-  font-family: Montserrat;
+  font-family: montserrat,sans-serif;
+  font-weight: 800;
   font-size: 72px;
+}
+
+#about_us {
+  background: white;
+  background: linear-gradient(180deg, white 627px, #f0f0f0 627px);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f0f0f0",GradientType=1);
+  padding-top: 120px;
+}
+
+#about_us .about_us-bg {
+  background-image: url("../img/about-img.png");
+  background-size: cover;
+  padding: 110px 4.5%;
+}
+
+#about_us .about_us-box {
+  background-color: #f0f0f0;
+  padding: 50px 30px;
+  max-width: 100%;
+  width: 590px;
+}
+
+#about_us .about_us-box p {
+  font-family: 'Noto Sans JP';
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.two-col {
+  background-color: #f0f0f0;
+  padding-bottom: 60px;
+  padding-top: 80px;
+}
+
+.two-col .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.two-col #works, .two-col #culture {
+  width: 47.27%;
+}
+
+.two-col .img-wrapper {
+  background-size: cover;
+  height: 24.31vw;
+  margin-bottom: 27px;
+  max-height: 350px;
+}
+
+.two-col #works .img-wrapper {
+  background-image: url("../img/daria-shevtsova-k_RYBedEvDw-unsplash.png");
+}
+
+.two-col #culture .img-wrapper {
+  background-image: url("../img/timon-studler-BIk2ANMmNz4-unsplash.png");
+}
+
+.two-col p {
+  margin-bottom: 28px;
+}
+
+footer {
+  background-color: #525252;
+  padding: 18px 0;
+}
+
+footer small {
+  color: #fff;
+  display: block;
+  font-family: montserrat,sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
