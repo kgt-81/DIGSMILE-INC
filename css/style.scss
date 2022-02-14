@@ -50,26 +50,30 @@ header{
   padding: 0 2.01%;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 50;
   h1{
     left: 2.01%;
-    top: 30px;
     position: fixed;
-    z-index: 100;
+    top: 30px;
+    width: 260px;
+    z-index: 70;
+    a{
+      display: block;
+    }
   }
-  #humberger-menu{
+  #hamburger-menu{
     color: #fff;
     font-family: montserrat,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 10px;
     height: 12px;
-    left: 91.74%;
     line-height: 12px;
     padding-left: 29px;
     position: fixed;
+    right: 4.03%;
     top: 36px;
-    z-index: 50;
+    z-index: 150;
     &.open{
       .top{
         left: 11px;
@@ -107,6 +111,75 @@ header{
 
 }
 
+// header nav
+#nav-wrapper{
+  background-color: rgba(34,34,34,0);
+  display: flex;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  .nav-block{
+    background-color: rgba(34,34,34,0.9);
+    height: 100%;
+    max-width: 100%;
+    padding-top: 180px;
+    position: absolute;
+    right: -100%;
+    transition-duration: 0.4s;
+    width: 520px;
+    .logo{
+      display: block;
+      margin: 0 auto 40px;
+      width: 42px;
+    }
+  }
+  ul{
+    list-style: none;
+    margin: 0 auto;
+    width: 120px;
+    li{
+      margin-bottom: 30px;
+      text-align: center;
+      a{
+        color: #fff;
+        font-family: montserrat,sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      &:nth-of-type(2){
+        margin-bottom: 31px;
+      }
+    }
+  }
+  &.show{
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-name: navFadeIn;
+    animation-direction: alternate;
+    background-color: rgba(34,34,34,0.6);
+    .nav-block{
+      right: 0;
+    }
+  }
+}
+
+@keyframes navFadeIn{
+  0%{
+    display: none;
+  }
+  1%{
+    display: flex;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 // fv
 .fv{
   background: rgb(255,255,255);
@@ -116,17 +189,28 @@ header{
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
   height: 740px;
   position: relative;
-  img{
+  .fv-img{
+    background-image: url('../img/the-honest-company-uM-WXMr-1.png');
+    background-position: center 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
     left: 0;
+    height: 640px;
     max-width: none;
     position: absolute;
     top: 0;
     width: 76.39%;
   }
+  .fv-bg{
+    background-color: #000;
+    height: 100%;
+    opacity: 0.34;
+    width: 100%;
+  }
   .fv-text-box{
     color: #fff;
-    left: 66.25%;
     position: absolute;
+    right: 13.47%;
     top: 161px;
   }
   .small-text{
@@ -237,6 +321,28 @@ header{
   }
 }
 
+// contact
+#contact{
+  padding: 60px 0 120px;
+  .wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact_text{
+    width: 40%;
+    p{
+      font-family: '游ゴシック';
+      font-weight: 500;
+      line-height: 2;
+      margin-bottom: 60px;
+    }
+  }
+  .contact_img{
+    width: 52.73%;
+  }
+}
+
 // footer
 footer{
   background-color: #525252;
@@ -247,5 +353,46 @@ footer{
     font-family: montserrat,sans-serif;
     font-weight: 500;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px){
+  // fv
+  .fv {
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#222222",GradientType=1);
+    height: 1024px;
+    .fv-img{
+      height: 890px;
+    }
+    .fv-text-box{
+      right: 12%;
+    }
+    .small-text{
+      font-size: 16px;
+    }
+    .small-text-en{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .large-text{
+      font-size: 56px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  // fv
+  .fv {
+    height: 667px;
+    .fv-img{
+      height: 580px;
+    }
+    .fv-text-box{
+      right: 2.6%;
+    }
   }
 }
