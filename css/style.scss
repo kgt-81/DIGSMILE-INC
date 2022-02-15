@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 *{
   box-sizing: border-box;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -28,7 +29,7 @@ h2{
   width: 76.39%;
 }
 
-.readme{
+.read_more{
   background-color: #000;
   color: #fff;
   display: block;
@@ -41,6 +42,13 @@ h2{
   width: 160px;
 }
 
+.filter{
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 // header
 header{
@@ -113,18 +121,23 @@ header{
 
 // header nav
 #nav-wrapper{
-  background-color: rgba(34,34,34,0);
-  display: flex;
-  height: 100vh;
   left: 0;
-  opacity: 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
+  .nav-bg{
+    background-color: rgba(34,34,34,0.6);
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .nav-block{
     background-color: rgba(34,34,34,0.9);
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
     padding-top: 180px;
     position: absolute;
@@ -156,11 +169,6 @@ header{
     }
   }
   &.show{
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-name: navFadeIn;
-    animation-direction: alternate;
-    background-color: rgba(34,34,34,0.6);
     .nav-block{
       right: 0;
     }
@@ -208,10 +216,12 @@ header{
     width: 100%;
   }
   .fv-text-box{
-    color: #fff;
     position: absolute;
     right: 13.47%;
     top: 161px;
+    *{
+      color: #fff;
+    }
   }
   .small-text{
     font-family: '游ゴシック';
@@ -271,15 +281,26 @@ header{
     height: 24.31vw;
     margin-bottom: 27px;
     max-height: 350px;
+    position: relative;
   }
-  #works .img-wrapper{
-    background-image: url('../img/daria-shevtsova-k_RYBedEvDw-unsplash.png');
+  #works {
+    margin-bottom: 80px;
+    .img-wrapper{
+      background-image: url('../img/daria-shevtsova-k_RYBedEvDw-unsplash.png');
+    }
+    .filter{
+      background-color: rgba(0,0,0,0.24);
+    }
   }
   #culture .img-wrapper{
     background-image: url('../img/timon-studler-BIk2ANMmNz4-unsplash.png');
+    .filter{
+      background-color: rgba(0,0,0,0.34);
+    }
   }
 
   p{
+    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
     margin-bottom: 28px;
   }
 }
@@ -323,6 +344,7 @@ header{
 
 // contact
 #contact{
+  background-color: #f2f2f2;
   padding: 60px 0 120px;
   .wrapper{
     align-items: center;
@@ -339,7 +361,11 @@ header{
     }
   }
   .contact_img{
+    position: relative;
     width: 52.73%;
+  }
+  .filter{
+    background-color: rgba(0,0,0,0.34);
   }
 }
 
@@ -357,6 +383,10 @@ footer{
 }
 
 @media screen and (max-width: 768px){
+  .wrapper{
+    width: 91.15%;
+  }
+  
   // fv
   .fv {
     background: rgb(255,255,255);
@@ -381,6 +411,67 @@ footer{
     .large-text{
       font-size: 56px;
     }
+  }
+
+  // about_us
+  #about_us {
+    padding-top: 80px;
+    .wrapper{
+      margin: 0;
+      width: 100%;
+    }
+    .about_us-bg{
+      padding: 60px 11.59%;
+    }
+    .about_us-box{
+      padding: 40px 30px;
+    }
+    .read_more{
+      font-size: 11px;
+    }
+  }
+
+  // works,culture
+  .two-col {
+    padding-bottom: 40px;
+    padding-top: 60px;
+    .wrapper{
+      flex-direction: column;
+    }
+    #works,#culture{
+      width: 74.29%;
+    }
+    .img-wrapper{
+      height: 45.57vw;
+    }
+  }
+  // latest_topics
+  #latest_topics {
+    padding: 40px 0;
+    .wrapper{
+      align-items: start;
+    }
+    .topics_box{
+      width: 100%;
+    }
+  }
+
+  // contact
+  #contact{
+    padding: 40px 0 80px;
+    .wrapper{
+      flex-direction: column-reverse;
+      &>*{
+        width: 100%;
+      }
+    }
+    .contact_img{
+      margin-bottom: 40px;
+    }
+  }
+  // footer
+  footer small{
+    font-size: 10px;
   }
 }
 
