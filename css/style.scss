@@ -301,6 +301,7 @@ header{
 
   p{
     font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    font-weight: 500;
     margin-bottom: 28px;
   }
 }
@@ -476,6 +477,13 @@ footer{
 }
 
 @media screen and (max-width: 375px){
+  h2{
+    font-size: 28px;
+  }
+  .wrapper{
+    width: 92%;
+  }
+
   // fv
   .fv {
     height: 667px;
@@ -484,6 +492,44 @@ footer{
     }
     .fv-text-box{
       right: 2.6%;
+    }
+  }
+
+  // about_us
+  #about_us {
+    padding-top: 78px;
+    .about_us-bg{
+      padding: 50px 4%;
+    }
+    .about_us-box p{
+      font-size: 14px;
+    }
+  }
+
+  // works,culture
+  .two-col{
+    padding-top: 40px;
+    #works,#culture{
+      width: 100%;
+    }
+    #works{
+      margin-bottom: 40px;
+    }
+    .img-wrapper{
+      height: 61.87vw;
+    }
+  }
+
+  // latest_topics
+  #latest_topics .topics_box p{
+    font-size: 12px;
+  }
+
+  // contact
+  #contact{
+    padding-bottom: 40px;
+    .contact_img{
+      margin-bottom: 30px;
     }
   }
 }
