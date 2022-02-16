@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #333;
   margin: 0;
   padding: 0;
@@ -53,6 +54,8 @@ h2 {
 
 header {
   border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 0;
   padding: 0 2.01%;
@@ -79,7 +82,8 @@ header h1 a {
 
 header h1 .a {
   fill: #fff;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 header h1.black .a {
@@ -119,7 +123,8 @@ header #hamburger-menu.open span {
 
 header #hamburger-menu.open .top {
   left: 11px;
-  transform: translate(-50%, -50%) rotate(30deg);
+  -webkit-transform: translate(-50%, -50%) rotate(30deg);
+          transform: translate(-50%, -50%) rotate(30deg);
   top: 50%;
 }
 
@@ -130,7 +135,8 @@ header #hamburger-menu.open .center {
 header #hamburger-menu.open .bottom {
   bottom: 50%;
   left: 11px;
-  transform: translate(-50%, 50%) rotate(-30deg);
+  -webkit-transform: translate(-50%, 50%) rotate(-30deg);
+          transform: translate(-50%, 50%) rotate(-30deg);
 }
 
 header span {
@@ -138,7 +144,8 @@ header span {
   height: 2px;
   left: 0;
   position: absolute;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
   width: 22px;
 }
 
@@ -148,7 +155,8 @@ header .top {
 
 header .center {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 header .bottom {
@@ -180,7 +188,8 @@ header .bottom {
   padding-top: 180px;
   position: absolute;
   right: -100%;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
   width: 520px;
 }
 
@@ -218,8 +227,7 @@ header .bottom {
 
 #fv {
   background: white;
-  background: -moz-linear-gradient(90deg, white 54%, #212221 54%);
-  background: -webkit-linear-gradient(90deg, white 54%, #212221 54%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(54%, white), color-stop(54%, #212221));
   background: linear-gradient(90deg, white 54%, #212221 54%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
   height: 740px;
@@ -257,7 +265,7 @@ header .bottom {
 }
 
 #fv .small-text {
-  font-family: '游ゴシック';
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -270,12 +278,11 @@ header .bottom {
   font-family: montserrat,sans-serif;
   font-weight: 800;
   font-size: 72px;
+  line-height: 1.19;
 }
 
 #about_us {
   background: white;
-  background: -moz-linear-gradient(180deg, white 627px, #f0f0f0 627px);
-  background: -webkit-linear-gradient(180deg, white 627px, #f0f0f0 627px);
   background: linear-gradient(180deg, white 627px, #f0f0f0 627px);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f0f0f0",GradientType=1);
   padding-top: 120px;
@@ -307,8 +314,12 @@ header .bottom {
 }
 
 .two-col .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .two-col #works, .two-col #culture {
@@ -358,9 +369,16 @@ header .bottom {
 }
 
 #latest_topics .wrapper {
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #latest_topics .topics_box {
@@ -386,7 +404,7 @@ header .bottom {
 }
 
 #latest_topics .topics_box p {
-  font-family: '游ゴシック';
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   padding-bottom: 10px;
@@ -398,9 +416,15 @@ header .bottom {
 }
 
 #contact .wrapper {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #contact .contact_text {
@@ -408,7 +432,7 @@ header .bottom {
 }
 
 #contact .contact_text p {
-  font-family: '游ゴシック';
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-weight: 500;
   line-height: 2;
   margin-bottom: 60px;
@@ -436,6 +460,23 @@ footer small {
   text-align: center;
 }
 
+.about_us #fv {
+  height: 464px;
+}
+
+.about_us #fv #fv-img {
+  background-image: url("../img/jacek-dylag-PMxT0XtQ--A-unsplash.png");
+  height: 387px;
+}
+
+.about_us #fv .small-text {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+}
+
+.about_us section {
+  padding-top: 120px;
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 91.15%;
@@ -446,8 +487,7 @@ footer small {
   }
   #fv {
     background: white;
-    background: -moz-linear-gradient(90deg, white 26%, #222222 26%);
-    background: -webkit-linear-gradient(90deg, white 26%, #222222 26%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(26%, white), color-stop(26%, #222222));
     background: linear-gradient(90deg, white 26%, #222222 26%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#222222",GradientType=1);
     height: 1024px;
@@ -489,7 +529,10 @@ footer small {
     padding-top: 60px;
   }
   .two-col .wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .two-col #works, .two-col #culture {
     width: 74.29%;
@@ -501,7 +544,9 @@ footer small {
     padding: 40px 0;
   }
   #latest_topics .wrapper {
-    align-items: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   #latest_topics .topics_box {
     width: 100%;
@@ -510,7 +555,10 @@ footer small {
     padding: 40px 0 80px;
   }
   #contact .wrapper {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   #contact .wrapper > * {
     width: 100%;
@@ -573,3 +621,4 @@ footer small {
     margin-bottom: 30px;
   }
 }
+/*# sourceMappingURL=style.css.map */
