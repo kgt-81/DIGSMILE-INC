@@ -69,8 +69,21 @@ header h1 {
   z-index: 70;
 }
 
+header h1:hover {
+  opacity: 0.5;
+}
+
 header h1 a {
   display: block;
+}
+
+header h1 .a {
+  fill: #fff;
+  transition-duration: 0.4s;
+}
+
+header h1.black .a {
+  fill: #333;
 }
 
 header #hamburger-menu {
@@ -86,6 +99,22 @@ header #hamburger-menu {
   right: 4.03%;
   top: 36px;
   z-index: 150;
+}
+
+header #hamburger-menu.black {
+  color: #333;
+}
+
+header #hamburger-menu.black span {
+  background-color: #333;
+}
+
+header #hamburger-menu.open {
+  color: #fff;
+}
+
+header #hamburger-menu.open span {
+  background-color: #fff;
 }
 
 header #hamburger-menu.open .top {
@@ -187,20 +216,7 @@ header .bottom {
   right: 0;
 }
 
-@keyframes navFadeIn {
-  0% {
-    display: none;
-  }
-  1% {
-    display: flex;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fv {
+#fv {
   background: white;
   background: -moz-linear-gradient(90deg, white 54%, #212221 54%);
   background: -webkit-linear-gradient(90deg, white 54%, #212221 54%);
@@ -210,7 +226,7 @@ header .bottom {
   position: relative;
 }
 
-.fv .fv-img {
+#fv #fv-img {
   background-image: url("../img/the-honest-company-uM-WXMr-1.png");
   background-position: center 0%;
   background-repeat: no-repeat;
@@ -223,34 +239,34 @@ header .bottom {
   width: 76.39%;
 }
 
-.fv .fv-bg {
+#fv .fv-bg {
   background-color: #000;
   height: 100%;
   opacity: 0.34;
   width: 100%;
 }
 
-.fv .fv-text-box {
+#fv .fv-text-box {
   position: absolute;
   right: 13.47%;
   top: 161px;
 }
 
-.fv .fv-text-box * {
+#fv .fv-text-box * {
   color: #fff;
 }
 
-.fv .small-text {
+#fv .small-text {
   font-family: '游ゴシック';
   font-size: 20px;
   font-weight: 700;
 }
 
-.fv .small-text-en {
+#fv .small-text-en {
   font-family: 'Montserrat Medium',sans-serif;
 }
 
-.fv .large-text {
+#fv .large-text {
   font-family: montserrat,sans-serif;
   font-weight: 800;
   font-size: 72px;
@@ -424,7 +440,11 @@ footer small {
   .wrapper {
     width: 91.15%;
   }
-  .fv {
+  header h1 {
+    top: 35px;
+    width: 189px;
+  }
+  #fv {
     background: white;
     background: -moz-linear-gradient(90deg, white 26%, #222222 26%);
     background: -webkit-linear-gradient(90deg, white 26%, #222222 26%);
@@ -432,20 +452,20 @@ footer small {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#222222",GradientType=1);
     height: 1024px;
   }
-  .fv .fv-img {
+  #fv #fv-img {
     height: 890px;
   }
-  .fv .fv-text-box {
+  #fv .fv-text-box {
     right: 12%;
   }
-  .fv .small-text {
+  #fv .small-text {
     font-size: 16px;
   }
-  .fv .small-text-en {
+  #fv .small-text-en {
     font-size: 16px;
     font-weight: bold;
   }
-  .fv .large-text {
+  #fv .large-text {
     font-size: 56px;
   }
   #about_us {
@@ -510,13 +530,16 @@ footer small {
   .wrapper {
     width: 92%;
   }
-  .fv {
+  header h1 {
+    top: 20px;
+  }
+  #fv {
     height: 667px;
   }
-  .fv .fv-img {
+  #fv #fv-img {
     height: 580px;
   }
-  .fv .fv-text-box {
+  #fv .fv-text-box {
     right: 2.6%;
   }
   #about_us {

@@ -65,8 +65,18 @@ header{
     top: 30px;
     width: 260px;
     z-index: 70;
+    &:hover{
+      opacity: 0.5;
+    }
     a{
       display: block;
+    }
+    .a{
+      fill: #fff;
+      transition-duration: 0.4s;
+    }
+    &.black .a{
+      fill: #333;
     }
   }
   #hamburger-menu{
@@ -79,10 +89,22 @@ header{
     line-height: 12px;
     padding-left: 29px;
     position: fixed;
+
     right: 4.03%;
     top: 36px;
     z-index: 150;
+    &.black {
+      color: #333;
+      span {
+        background-color: #333;
+      }
+    }
+
     &.open{
+      color: #fff;
+      span {
+        background-color: #fff;
+      }
       .top{
         left: 11px;
         transform: translate(-50%,-50%) rotate(30deg);
@@ -175,21 +197,8 @@ header{
   }
 }
 
-@keyframes navFadeIn{
-  0%{
-    display: none;
-  }
-  1%{
-    display: flex;
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
 // fv
-.fv{
+#fv{
   background: rgb(255,255,255);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 54%, rgba(33,34,33,1) 54%);
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 54%, rgba(33,34,33,1) 54%);
@@ -197,7 +206,7 @@ header{
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
   height: 740px;
   position: relative;
-  .fv-img{
+  #fv-img{
     background-image: url('../img/the-honest-company-uM-WXMr-1.png');
     background-position: center 0%;
     background-repeat: no-repeat;
@@ -387,16 +396,22 @@ footer{
   .wrapper{
     width: 91.15%;
   }
+
+  // header
+  header h1{
+    top: 35px;
+    width: 189px;
+  }
   
   // fv
-  .fv {
+  #fv {
     background: rgb(255,255,255);
     background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
     background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
     background: linear-gradient(90deg, rgba(255,255,255,1) 26%, rgba(34,34,34,1) 26%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#222222",GradientType=1);
     height: 1024px;
-    .fv-img{
+    #fv-img{
       height: 890px;
     }
     .fv-text-box{
@@ -484,10 +499,15 @@ footer{
     width: 92%;
   }
 
+  // header
+  header h1{
+    top: 20px;
+  }
+
   // fv
-  .fv {
+  #fv {
     height: 667px;
-    .fv-img{
+    #fv-img{
       height: 580px;
     }
     .fv-text-box{
