@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #333;
   margin: 0;
   padding: 0;
@@ -54,8 +53,6 @@ h2 {
 
 header {
   border-radius: 2px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   left: 0;
   padding: 0 2.01%;
@@ -82,8 +79,7 @@ header h1 a {
 
 header h1 .a {
   fill: #fff;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 header h1.black .a {
@@ -123,8 +119,7 @@ header #hamburger-menu.open span {
 
 header #hamburger-menu.open .top {
   left: 11px;
-  -webkit-transform: translate(-50%, -50%) rotate(30deg);
-          transform: translate(-50%, -50%) rotate(30deg);
+  transform: translate(-50%, -50%) rotate(30deg);
   top: 50%;
 }
 
@@ -135,8 +130,7 @@ header #hamburger-menu.open .center {
 header #hamburger-menu.open .bottom {
   bottom: 50%;
   left: 11px;
-  -webkit-transform: translate(-50%, 50%) rotate(-30deg);
-          transform: translate(-50%, 50%) rotate(-30deg);
+  transform: translate(-50%, 50%) rotate(-30deg);
 }
 
 header span {
@@ -144,8 +138,7 @@ header span {
   height: 2px;
   left: 0;
   position: absolute;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
   width: 22px;
 }
 
@@ -155,8 +148,7 @@ header .top {
 
 header .center {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 header .bottom {
@@ -188,8 +180,7 @@ header .bottom {
   padding-top: 180px;
   position: absolute;
   right: -100%;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
   width: 520px;
 }
 
@@ -227,7 +218,8 @@ header .bottom {
 
 #fv {
   background: white;
-  background: -webkit-gradient(linear, left top, right top, color-stop(54%, white), color-stop(54%, #212221));
+  background: -moz-linear-gradient(90deg, white 54%, #212221 54%);
+  background: -webkit-linear-gradient(90deg, white 54%, #212221 54%);
   background: linear-gradient(90deg, white 54%, #212221 54%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#212221",GradientType=1);
   height: 740px;
@@ -283,6 +275,8 @@ header .bottom {
 
 #about_us {
   background: white;
+  background: -moz-linear-gradient(180deg, white 627px, #f0f0f0 627px);
+  background: -webkit-linear-gradient(180deg, white 627px, #f0f0f0 627px);
   background: linear-gradient(180deg, white 627px, #f0f0f0 627px);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f0f0f0",GradientType=1);
   padding-top: 120px;
@@ -314,12 +308,8 @@ header .bottom {
 }
 
 .two-col .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .two-col #works, .two-col #culture {
@@ -369,16 +359,9 @@ header .bottom {
 }
 
 #latest_topics .wrapper {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: flex-end;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #latest_topics .topics_box {
@@ -416,15 +399,9 @@ header .bottom {
 }
 
 #contact .wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #contact .contact_text {
@@ -466,6 +443,7 @@ footer small {
 
 .about_us #fv #fv-img {
   background-image: url("../img/jacek-dylag-PMxT0XtQ--A-unsplash.png");
+  background-position: center 15%;
   height: 387px;
 }
 
@@ -475,6 +453,86 @@ footer small {
 
 .about_us section {
   padding-top: 120px;
+}
+
+.about_us section .large-text {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.about_us section .small-text {
+  font-family: 'Noto Sans JP';
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 2em;
+}
+
+.about_us section .small-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about_us #vision h2 {
+  margin-bottom: 25px;
+}
+
+.about_us #vision .wrapper {
+  padding-left: 15.69%;
+}
+
+.about_us #vision .vision-box {
+  max-width: 415px;
+  width: 100%;
+}
+
+.about_us #ceo_message .wrapper {
+  padding: 144px 0 0 22.92%;
+  position: relative;
+}
+
+.about_us #ceo_message .wrapper img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 38.19%;
+}
+
+.about_us #ceo_message .ceo_message-box {
+  background-color: #f0f0f0;
+  padding: 120px 24.03% 90px;
+}
+
+.about_us #company .company-box {
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about_us #company dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.about_us #company dl dt {
+  border-bottom: 1px solid #ddd;
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-weight: bold;
+  height: 56px;
+  line-height: 56px;
+  width: 14.25%;
+}
+
+.about_us #company dl dd {
+  border-bottom: 1px solid #ddd;
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-weight: 500;
+  height: 56px;
+  line-height: 56px;
+  width: 85.75%;
 }
 
 @media screen and (max-width: 768px) {
@@ -487,7 +545,8 @@ footer small {
   }
   #fv {
     background: white;
-    background: -webkit-gradient(linear, left top, right top, color-stop(26%, white), color-stop(26%, #222222));
+    background: -moz-linear-gradient(90deg, white 26%, #222222 26%);
+    background: -webkit-linear-gradient(90deg, white 26%, #222222 26%);
     background: linear-gradient(90deg, white 26%, #222222 26%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#222222",GradientType=1);
     height: 1024px;
@@ -529,10 +588,7 @@ footer small {
     padding-top: 60px;
   }
   .two-col .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .two-col #works, .two-col #culture {
     width: 74.29%;
@@ -544,9 +600,7 @@ footer small {
     padding: 40px 0;
   }
   #latest_topics .wrapper {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    align-items: start;
   }
   #latest_topics .topics_box {
     width: 100%;
@@ -555,10 +609,7 @@ footer small {
     padding: 40px 0 80px;
   }
   #contact .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   #contact .wrapper > * {
     width: 100%;
@@ -621,4 +672,3 @@ footer small {
     margin-bottom: 30px;
   }
 }
-/*# sourceMappingURL=style.css.map */

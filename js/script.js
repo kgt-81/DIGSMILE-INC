@@ -15,8 +15,8 @@ for (let i = 0; i < menu_link.length; i++) {
     hamburger_menu.classList.remove('open');
     nav_wrapper.classList.remove('show');
     $('.nav-bg').stop(true,true).fadeOut();
-    document.addEventListener('touchmove', disableScroll, { passive: false });
-    document.addEventListener('mousewheel', disableScroll, { passive: false });
+    document.removeEventListener('touchmove', disableScroll, { passive: false });
+      document.removeEventListener('mousewheel', disableScroll, { passive: false });
     window.scrollTo({
       top: position,
       behavior: "smooth"

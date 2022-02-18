@@ -399,6 +399,7 @@ footer{
     height: 464px;
     #fv-img {
       background-image: url('../img/jacek-dylag-PMxT0XtQ--A-unsplash.png');
+      background-position: center 15%;
       height: 387px;
     }
     .small-text {
@@ -407,6 +408,80 @@ footer{
   }
   section {
     padding-top: 120px;
+    .large-text {
+      font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 27px;
+    }
+    .small-text {
+      font-family: 'Noto Sans JP';
+      font-weight: bold;
+      line-height: 2;
+      margin-bottom: 2em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #vision {
+    h2 {
+      margin-bottom: 25px;
+    }
+    .wrapper {
+      padding-left: 15.69%;
+    }
+    
+    .vision-box{
+      max-width: 415px;
+      width: 100%;
+    }
+  }
+  #ceo_message {
+    .wrapper {
+      padding: 144px 0 0 22.92%;
+      position: relative;
+      img {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 38.19%;
+      }
+    }
+    .ceo_message-box {
+      background-color: #f0f0f0;
+      padding: 120px 24.03% 90px;
+    }
+  }
+  #company {
+    .company-box{
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: flex-end;
+    }
+    dl{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      max-width: 800px;
+      width: 100%;
+      dt {
+        border-bottom: 1px solid #ddd;
+        font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+        font-weight: bold;
+        height: 56px;
+        line-height: 56px;
+        width: 14.25%;
+      }
+      dd {
+        border-bottom: 1px solid #ddd;
+        font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+        font-weight: 500;
+        height: 56px;
+        line-height: 56px;
+        width: 85.75%;
+      }
+    }
   }
 }
 
