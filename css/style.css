@@ -487,7 +487,7 @@ footer small {
 }
 
 .about_us #ceo_message .wrapper {
-  padding: 144px 0 0 22.92%;
+  padding: 131px 0 0 22.92%;
   position: relative;
 }
 
@@ -533,6 +533,12 @@ footer small {
   height: 56px;
   line-height: 56px;
   width: 85.75%;
+}
+
+.about_us #company iframe {
+  height: 360px;
+  margin-bottom: 120px;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -620,6 +626,43 @@ footer small {
   footer small {
     font-size: 10px;
   }
+  .about_us section {
+    padding-top: 80px;
+  }
+  .about_us .wrapper {
+    width: 92.1875%;
+  }
+  .about_us #fv .large-text {
+    font-size: 52px;
+  }
+  .about_us #vision .wrapper {
+    padding-left: 15.625%;
+  }
+  .about_us #vision .small-text {
+    font-size: 14px;
+  }
+  .about_us #ceo_message .wrapper img {
+    width: 320px;
+  }
+  .about_us #ceo_message .ceo_message-box {
+    padding: 109px 39px 78px 40px;
+  }
+  .about_us #company {
+    padding-top: 82px;
+  }
+  .about_us #company dl {
+    width: 95.76%;
+  }
+  .about_us #company dl dt {
+    width: 21.24%;
+  }
+  .about_us #company dl dd {
+    width: 78.76%;
+  }
+  .about_us #company iframe {
+    height: 230px;
+    margin-bottom: 80px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -670,5 +713,11 @@ footer small {
   }
   #contact .contact_img {
     margin-bottom: 30px;
+  }
+  .about_us .wrapper {
+    width: 92%;
+  }
+  .about_us #vision .wrapper {
+    padding-left: 0;
   }
 }

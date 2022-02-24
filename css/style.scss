@@ -439,7 +439,7 @@ footer{
   }
   #ceo_message {
     .wrapper {
-      padding: 144px 0 0 22.92%;
+      padding: 131px 0 0 22.92%;
       position: relative;
       img {
         left: 0;
@@ -481,6 +481,11 @@ footer{
         line-height: 56px;
         width: 85.75%;
       }
+    }
+    iframe{
+      height: 360px;
+      margin-bottom: 120px;
+      width: 100%;
     }
   }
 }
@@ -583,6 +588,53 @@ footer{
   footer small{
     font-size: 10px;
   }
+
+  // about ページ
+  .about_us {
+    section {
+      padding-top: 80px;
+    }
+    .wrapper {
+      width: 92.1875%;
+    }
+    #fv .large-text{
+      font-size: 52px;
+    }
+
+    #vision {
+      .wrapper {
+        padding-left: 15.625%;
+      }
+      .small-text {
+        font-size: 14px;
+      }
+    }
+
+    #ceo_message {
+      .wrapper img {
+        width: 320px;
+      }
+      .ceo_message-box{
+        padding: 109px 39px 78px 40px;
+      }
+    }
+    #company {
+      padding-top: 82px;
+      dl {
+        width: 95.76%;
+        dt {
+          width: 21.24%;
+        }
+        dd {
+          width: 78.76%;
+        }
+      }
+      iframe{
+        height: 230px;
+        margin-bottom: 80px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 375px){
@@ -644,6 +696,18 @@ footer{
     padding-bottom: 40px;
     .contact_img{
       margin-bottom: 30px;
+    }
+  }
+
+  // about ページ
+  .about_us {
+    .wrapper {
+      width: 92%;
+    }
+    #vision {
+      .wrapper {
+        padding-left: 0;
+      }
     }
   }
 }
